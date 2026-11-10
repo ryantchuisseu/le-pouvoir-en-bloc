@@ -1,0 +1,9 @@
+node_modules/
+prev/
+thumb/
+*.wav
+video_noaudio.mp4
+# extraits audio tiers (droits d'auteur) : non versionnés
+meme_football.mp4
+chanson.mp4
+excuses.mp4
