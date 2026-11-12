@@ -24,8 +24,10 @@ Mis à jour : 2026-11-06
 | 1 | 06/11 | Népotisme | ✅ | ✅ | ✅ | ✅ | ✅ | ⏳ à 18h |
 | 2 | 07/11 | Dictature | ✅ (v2 sarcastique) | ✅ | ✅ 84 s | ✅ | ✅ | ⏳ à 18h |
 | 3 | 08/11 | Coup d'État (Gén. Mobutu, clip foot) | ✅ v3 | ✅ | ✅ 67 s | ✅ | ✅ | ⏳ à 18h |
-| 4 | 10/11 (09/11 manqué) | Culte de la personnalité (chanson + excuses) | ✅ v2 | ✅ | ✅ 80 s | ✅ | ✅ | ⏳ à 18h |
-| 5 | 11/11 | Clientélisme | ✅ | ⏳ | ⏳ | ⏳ | ⏳ | ⬜ |
+| 4 | 10/11 (09/11 manqué) | Culte de la personnalité (chanson + excuses) | ✅ v2 | ✅ | ✅ 80 s | ✅ | ✅ | ✅ |
+| 5 | 11/11 | Clientélisme (3 mèmes) | ✅ v2 court | ✅ | ✅ 55 s | ✅ | ✅ | ✅ |
+| 6 | 12/11 | Autocratie (hook mur + 2 mèmes) | ✅ v2 | ✅ | ✅ 65 s | ✅ | ✅ | ⏳ ce soir (en retard) |
+| 7 | 13/11 | Propagande | ✅ | ⏳ | ⏳ | ⏳ | ⏳ | ⬜ |
 
 Calendrier : J1-J3 = 06-08/11 ; 09/11 manqué → J4 = 10/11, J60 = 05/01/2027.
 
