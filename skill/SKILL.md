@@ -26,7 +26,7 @@ Accroche → Contexte (situation normale) → Élément déclencheur → Escalad
 ```
 
 ## Style de la chaîne (obligatoire)
-Lis **`references/style_ecriture.md`** avant d'écrire un script ou un scénario : ton **sarcastique**, punchlines après chaque étape, **un gag visuel toutes les 5-6 s** calé au mot près, 4e mur à la fin, boucle avec l'ouverture. Exemple complet validé : `assets/examples/dictature_sarcastique.js` (34 plans, 84 s).
+Lis **`references/style_ecriture.md`** avant d'écrire un script ou un scénario — **section 0 d'abord** (méthode validée : script court 135-150 mots, hook dès 0 s, mèmes audio de l'utilisateur utilisés comme répliques avec une phrase d'appel, callback, 4e mur + mème final). Ton sarcastique, un gag toutes les 5-6 s calé au mot près, personnages à la peau noire, le Général à la toque léopard récurrent. Insertion des mèmes : `scripts/insert_clip.py`. Exemples : `assets/examples/autocratie.js`, `clientelisme.js`.
 
 ## Workflow
 

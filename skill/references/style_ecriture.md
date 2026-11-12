@@ -1,5 +1,24 @@
 # Style « Le Pouvoir en Blocs » : écriture sarcastique + gags visuels
 
+## 0. MÉTHODE VALIDÉE (jours 5-6, « MDR ») — à appliquer en priorité
+L'utilisateur envoie chaque jour 1 à 3 **mèmes audio** (extraits .mp4 courts). Le script se construit AUTOUR d'eux :
+
+1. **Script court** : 135-150 mots (≈ 50 s de voix) ; avec les mèmes, la vidéo fait 55-65 s.
+2. **Hook de fou dès la seconde 0** : soit un mème audio joué AVANT la narration sur une image choc (ministre qui se tape la tête contre le mur + « NOOON tape pas contre le mur gros »), soit une première phrase-question qui décrit cette image (« Pourquoi ce ministre se tape la tête contre le mur ? Parce qu'il vit dans une autocratie. »).
+3. **Les mèmes = répliques des personnages**, jamais des bruitages. Écris la phrase qui les APPELLE juste avant (le « setup »), puis le mème répond :
+   - « Tu vas le voir pour réclamer ? » → le chef : « Bolosse que tu es. » (porte qui claque)
+   - « Un ministre ose dire : Je ne suis pas d'accord. » → le chef : « Tu n'es pas avec nous. » (cage)
+   - « Le candidat fait du porte-à-porte. » → la villageoise : « C'est qui ce mignon ? » (cœurs)
+   Le texte ElevenLabs ne contient JAMAIS le mème : dis-le à l'utilisateur.
+4. **Callback** : reprends le gag du hook au milieu en 3 mots (« D'où le mur. »).
+5. **Fin 4e mur + mème final** : la dernière phrase vise le spectateur (« Même chez toi, qui regardes cette vidéo. »), puis le mème de fin (« Ton ennemi n'est pas loin ») sur un zoom lent du chef → boucle avec le hook.
+6. **Personnage récurrent** : le Général à la toque léopard (peau noire, lunettes noires), candidat, roi ou autocrate selon le sujet ; il peut changer de chapeau (couronne, lauriers, écharpe) mais « le fauteuil reste le même ».
+7. Livre aussi au user un tableau « où tombent les mèmes / ce qu'on voit » avant qu'il génère la voix.
+
+**Montage** : `align.py` → choisis les instants d'insertion en FIN de segment (pause) → 
+`python3 -I scripts/insert_clip.py voix_eleven.mp3 words_raw.json voix.mp3 words.json "0|clip_mur.mp4|0.35|NOOON, tape pas contre le mur, gros !" "27.75|clip_pasavecnous.mp4|0.5|Tu n'es pas avec nous." "end|clip_ennemi.mp4|0.3|Ton ennemi n'est pas loin…"`
+→ cale les plans : avant un clip, temps inchangés ; après, ajoute le décalage affiché. Exemples complets : `assets/examples/clientelisme.js` (3 mèmes, porte-à-porte), `assets/examples/autocratie.js` (hook mur, conseil des ministres, chapeaux).
+
 Validé par l'utilisateur sur le jour 2 (dictature). À appliquer à **tous** les scripts et toutes les vidéos.
 
 ## 1. Écriture du script (voix off)
