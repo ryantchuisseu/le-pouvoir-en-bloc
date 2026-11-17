@@ -52,8 +52,10 @@ const bd={
 };
 const BOARD={cam:[V(0,3.7,1.6),V(0,4,.3)],look:[V(0,4.3,-6.4),V(0,4.4,-6.4)]};
 const TABLE={cam:[V(0,2.3,6.4),V(0,2.2,5.6)],look:[V(0,1.4,1.6),V(0,1.4,1.6)]};
-const T=[0,2.82,4.91,8.14,11.46,13.01,14.54,16.21,17.89,20.08,24.35,30.54,33.4,35.95,41.3,43.78,50.0,53.2,59.72,65.0];
+const T=[0,1.53,4.35,6.44,9.67,12.99,14.54,16.07,17.74,19.42,22.12,23.36,27.63,33.82,36.68,39.23,44.58,47.06,53.28,56.48,63.0,68.25];
 const specs=[
+ /*COLD OPEN 0 s : « Bolosse que tu es » — les 5 se moquent du candidat (flash-forward)*/ {cam:[V(4.6,2.3,3.4),V(3.9,2.2,3.3)],look:[V(0,1.4,3.2),V(0,1.4,3.2)],run(u){crate.visible=true;pose(cand,{x:0,y:.5,z:4.4,ry:Math.PI,t:u,headTilt:.4});
+   FIVE.forEach((c,i)=>pose(c,{x:-1.6+i*.8,z:2.2,ry:0,t:u*2+i,point:i==2?1:0,armsUp:i!=2&&Math.sin(u*9+i)>0?.6:0}));sVote.visible=true;sVote.position.set(0,3.3,4.4);}},
  /*0 HOOK: five hands up at the same time*/ {board:bd.vote,sfx:[['boing',.9]],...TABLE,run(u){five(u,i=>({armsUp:u>.8?1:0,t:0}));}},
  /*1 they own the whole village*/ {board:bd.owners,cam:[V(0,4.2,9.5),V(0,3.6,8)],look:[V(0,1.4,1.6),V(0,1.8,0)],run(u){five(u,i=>({cross:1}),false);crowd.forEach((c,i)=>{pose(c,{x:-3+i*1.5,z:5.5,ry:Math.PI,t:u+i,headTilt:.3});});}},
  /*2 definition*/ {board:bd.def,...BOARD,run(u){}},
@@ -62,7 +64,9 @@ const specs=[
  /*5 the bank*/ {cam:[V(4.8,2.2,4.6),V(5.2,2.1,4.2)],look:[V(7.6,1.3,0),V(7.6,1.3,0)],run(u){vault.visible=true;pose(olig[1],{x:6.6,z:.6,ry:faceTo(6.6,.6,5.6,3.6),t:u,cross:1});tags[1].visible=true;tags[1].position.set(6.6,2.95,.6);}},
  /*6 the newspaper*/ {cam:[V(-1.2,2,9.2),V(-1.6,2,8.8)],look:[V(-3,1.3,6.4),V(-3,1.3,6.4)],run(u){kiosk.visible=true;pose(olig[2],{x:-2,z:7,ry:faceTo(-2,7,-1.2,9.2),t:u,wave:1});tags[2].visible=true;tags[2].position.set(-2,2.95,7);}},
  /*7 the radio*/ {sfx:[['static',.1]],cam:[V(4.8,2,9.2),V(4.4,2,8.8)],look:[V(3,1.3,6.4),V(3,1.3,6.4)],run(u){radio.visible=true;radioStand.visible=true;pose(olig[3],{x:2,z:7,ry:faceTo(2,7,4.8,9.2),t:u,point:1});tags[3].visible=true;tags[3].position.set(2,2.95,7);}},
- /*8 the fifth? the General*/ {sfx:[['scratch',.05]],cam:[V(.6,2.6,-1.4),V(.4,2.6,-2.2)],look:[V(0,2.5,-4.3),V(0,2.5,-4.3)],run(u){pose(gen,{x:0,y:.9,z:-4.3,t:u,armsUp:u>.8?1:0});tagGen.visible=true;tagGen.position.set(0,3.6,-4.3);}},
+ /*8a the fifth? CLIP « c'est qui ? »*/ {cam:[V(0,2.6,8),V(0,2.8,6.6)],look:[V(0,2,-3),V(0,2.4,-4)],run(u){crowd.forEach((c,i)=>{pose(c,{x:-3+i*1.5,z:3,ry:Math.PI,t:u+i});});
+   [0,1,2,3,4].forEach(i=>{E.qMarks[i].visible=true;E.qMarks[i].position.set(-3+i*1.5,2.75+Math.sin(u*6+i)*.08,3);});}},
+ /*8b the General reveal*/ {sfx:[['scratch',.05]],cam:[V(.6,2.6,-1.4),V(.4,2.6,-2.2)],look:[V(0,2.5,-4.3),V(0,2.5,-4.3)],run(u){pose(gen,{x:0,y:.9,z:-4.3,t:u,armsUp:u>.3?1:0});tagGen.visible=true;tagGen.position.set(0,3.6,-4.3);}},
  /*9 their message, everywhere*/ {board:bd.msg1,...BOARD,run(u){pose(gen,{x:0,y:.9,z:-4.3,t:u,point:1});}},
  /*10 CLIP « il répète ça au moins 20 fois » — counter ×1 → ×20*/ {board:bd.msgN,cam:[V(0,4.2,.9),V(0,4.3,.1)],look:[V(0,4.4,-6.4),V(0,4.4,-6.4)],run(u){}},
  /*11 independent candidate*/ {cam:[V(1.6,1.9,7.4),V(1.3,1.85,6.8)],look:[V(0,1.6,4),V(0,1.6,4)],run(u){crate.visible=true;pose(cand,{x:0,y:.5,z:4,t:u,wave:1});sVote.visible=true;sVote.position.set(0,3.2,4);tagCand.visible=true;tagCand.position.set(0,2.85,4);}},

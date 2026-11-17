@@ -4,7 +4,7 @@
 L'utilisateur envoie chaque jour 1 à 3 **mèmes audio** (extraits .mp4 courts). Le script se construit AUTOUR d'eux :
 
 1. **Script court** : 135-150 mots (≈ 50 s de voix) ; avec les mèmes, la vidéo fait 55-65 s.
-2. **Hook de fou dès la seconde 0** : soit un mème audio joué AVANT la narration sur une image choc (ministre qui se tape la tête contre le mur + « NOOON tape pas contre le mur gros »), soit une première phrase-question qui décrit cette image (« Pourquoi ce ministre se tape la tête contre le mur ? Parce qu'il vit dans une autocratie. »).
+2. **OBLIGATOIRE : un mème audio OUVRE la vidéo à 0 s** (exigence de l'utilisateur : « plus tu tardes, plus les gens partent »). Jamais de narration avant le premier mème. Si aucun mème ne colle au début de l'histoire, fais un **flash-forward** : montre la scène la plus forte (la fin, l'humiliation, la catastrophe) avec son mème, puis la narration commence (« Pourquoi ces cinq hommes… »). Insertion : `"0|clip.wav|0.3|…"` dans insert_clip.py, plan COLD OPEN en tête du scénario (exemple : `assets/examples/oligarchie.js`). Ne réutilise pas ensuite le même mème plus loin.
 3. **Les mèmes = répliques des personnages**, jamais des bruitages. Écris la phrase qui les APPELLE juste avant (le « setup »), puis le mème répond :
    - « Tu vas le voir pour réclamer ? » → le chef : « Bolosse que tu es. » (porte qui claque)
    - « Un ministre ose dire : Je ne suis pas d'accord. » → le chef : « Tu n'es pas avec nous. » (cage)
