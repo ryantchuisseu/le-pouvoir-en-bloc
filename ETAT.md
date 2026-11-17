@@ -28,10 +28,11 @@ Mis à jour : 2026-11-06
 | 5 | 11/11 | Clientélisme (3 mèmes) | ✅ v2 court | ✅ | ✅ 55 s | ✅ | ✅ | ✅ |
 | 6 | 12/11 | Autocratie (hook mur + 2 mèmes) | ✅ v2 | ✅ | ✅ 65 s | ✅ | ✅ | ✅ |
 | 7 | 13/11 | Propagande (3 mèmes) | ✅ v2 | ✅ | ✅ 67 s | ✅ | ✅ | ✅ |
-| 8 | 15/11 (14/11 manqué) | Copinage (4 mèmes) | ✅ v2 | ✅ | ✅ 61 s | ✅ | ✅ | ⏳ à 18h |
-| 9 | 16/11 | Oligarchie | ✅ | ⏳ | ⏳ | ⏳ | ⏳ | ⬜ |
+| 8 | 15/11 (14/11 manqué) | Copinage (4 mèmes) | ✅ v2 | ✅ | ✅ 61 s | ✅ | ✅ | ✅ |
+| 9 | 17/11 (16/11 manqué) | Oligarchie (3 mèmes) | ✅ v2 | ✅ | ✅ 65 s | ✅ | ✅ | ⏳ à 18h |
+| 10 | 18/11 | Censure | ✅ | ⏳ | ⏳ | ⏳ | ⏳ | ⬜ |
 
-Calendrier : jours manqués 09/11 et 14/11 → J8 = 15/11, J60 = 06/01/2027.
+Calendrier : jours manqués 09/11, 14/11, 16/11 → J9 = 17/11, J60 = 07/01/2027.
 
 ## Fichiers
 - Jour 1 : `/home/user/videos/J01_nepotisme/` (vidéo, miniature, fiche, script, MP3)

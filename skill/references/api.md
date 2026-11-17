@@ -23,7 +23,7 @@ Chaque image : le moteur cache tout (personnages, sprites, confettis, fumée, ta
 | `cap` | `string[]` | Segments de sous-titre, qui se partagent `d` à parts égales |
 | `cam` | `[V,V]` | Position de la caméra au début et à la fin (interpolée) |
 | `look` | `[V,V]` | Point visé au début et à la fin |
-| `board` | `[key, draw]` ou `null` | Contenu du panneau central. `null` reprend le dernier panneau défini. `key` et `draw` peuvent être des fonctions de `u`, pour animer (ex. un compteur). `draw` à `null` réutilise le dessin du même `key` défini plus tôt. |
+| `board` | `[key, draw]` ou `null` | Contenu du panneau central. `null` reprend le dernier panneau défini. `key` et `draw` peuvent être des fonctions de `u`, pour animer (ex. un compteur). ⚠️ `u` est le temps LOCAL du plan (0 au début du plan), pas le temps global de la vidéo : un seuil « la ligne apparaît à 33,25 s » s'écrit `u > 33.25 - début_du_plan`. `draw` à `null` réutilise le dessin du même `key` défini plus tôt. |
 | `stamp` | `[texte, u]` | Tampon rouge plaqué sur le panneau à l'instant `u`, avec tremblement et « thud » |
 | `chat` | `[[texte,u,couleur?]]` | Message en bas à gauche, façon chat du jeu (jaune par défaut) |
 | `sfx` | `[[clé,u]]` | `chime`, `clang`, `poof`, `thud`, `whoosh` |
