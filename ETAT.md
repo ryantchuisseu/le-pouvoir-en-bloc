@@ -1,46 +1,19 @@
 # État de la chaîne « Le Pouvoir en Blocs »
 
-Mis à jour : 2026-11-06
+Mis à jour : 18/11/2026
 
-## Règles
-- Personnages à la PEAU NOIRE (teintes brunes variées) — demande de l'utilisateur (J3+).
-- Descriptions YouTube courtes : 1 phrase + 5 hashtags.
-- Ton : sarcastique + gags inattendus (statue qui éternue, oie ministre, tarte, chat du jeu, 4e mur).
-- 1 vidéo publiée chaque jour à 18h (Europe/Paris). Aucun jour sauté.
-- Calendrier : `calendrier_60_videos_pouvoir.xlsx` (60 sujets, du 03/11/2026 au 01/01/2027).
-- Voix : ElevenLabs, voix « Basti Boom », modèle Multilingual v2.
-- Rappel automatique chaque jour à 8h42 (Paris), dans la session.
+| N° | Date | Sujet | Mèmes | Durée | Statut |
+|---|---|---|---|---|---|
+| 1 | 06/11 | Népotisme | – (voix seule) | 57 s | ✅ publié |
+| 2 | 07/11 | Dictature (sarcastique) | – (gags visuels) | 84 s | ✅ publié |
+| 3 | 08/11 | Coup d'État (« Général Mobutu ») | Le football il a changé ×2 | 67 s | ✅ publié |
+| 4 | 10/11 | Culte de la personnalité | chanson « Mr le maire » + « Je suis désolé mon roi bien-aimé » | 80 s | ✅ publié |
+| 5 | 11/11 | Clientélisme | C'est qui ce mignon · Bolosse que tu es · tu as créé quelque chose de mauvais | 55 s | ✅ publié |
+| 6 | 12/11 | Autocratie | NOOON tape pas contre le mur (hook) · Tu n'es pas avec nous · Ton ennemi n'est pas loin | 65 s | ✅ publié (⚠️ panneaux animés vides, bug corrigé depuis) |
+| 7 | 13/11 | Propagande | Quelle humiliation (hook) · Tu es le joueur le plus nul · Qui dit je sais n'a pas tort | 67 s | ✅ publié |
+| 8 | 15/11 | Copinage | C'est qui ce mignon · On me drague · Maudit l'homme · En Versace | 61 s | ✅ publié (⚠️ 1 panneau partiel) |
+| 9 | 17/11 | Oligarchie (v3) | Bolosse que tu es (0 s) · C'est qui ? · 20 fois · Quelle humiliation · mon roi bien-aimé | 68 s | ✅ livré, publication 17/11 à confirmer |
+| **10** | **18/11** | **Censure** | ⏳ attendre les mèmes (le 1er ouvre la vidéo à 0 s) | – | 📝 script prêt (`videos/J10_censure/script_voix.txt`), MP3 non reçu |
 
-## Pipeline quotidien
-1. Rappel 8h42 : sujet du jour + script (écrit s'il n'existe pas).
-2. Toi : générer le MP3 dans ElevenLabs et le déposer dans la conversation.
-3. Moi : vidéo MP4, miniature 1080x1920, fiche de publication, script du lendemain.
-4. Toi : publier à 18h sur YouTube.
-5. Moi : nettoyer les fichiers intermédiaires (`cleanup_jour.sh`).
-
-## Statut par jour
-| N° | Date | Sujet | Script | MP3 | Vidéo | Miniature | Fiche | Publiée |
-|---|---|---|---|---|---|---|---|---|
-| 1 | 06/11 | Népotisme | ✅ | ✅ | ✅ | ✅ | ✅ | ⏳ à 18h |
-| 2 | 07/11 | Dictature | ✅ (v2 sarcastique) | ✅ | ✅ 84 s | ✅ | ✅ | ⏳ à 18h |
-| 3 | 08/11 | Coup d'État (Gén. Mobutu, clip foot) | ✅ v3 | ✅ | ✅ 67 s | ✅ | ✅ | ⏳ à 18h |
-| 4 | 10/11 (09/11 manqué) | Culte de la personnalité (chanson + excuses) | ✅ v2 | ✅ | ✅ 80 s | ✅ | ✅ | ✅ |
-| 5 | 11/11 | Clientélisme (3 mèmes) | ✅ v2 court | ✅ | ✅ 55 s | ✅ | ✅ | ✅ |
-| 6 | 12/11 | Autocratie (hook mur + 2 mèmes) | ✅ v2 | ✅ | ✅ 65 s | ✅ | ✅ | ✅ |
-| 7 | 13/11 | Propagande (3 mèmes) | ✅ v2 | ✅ | ✅ 67 s | ✅ | ✅ | ✅ |
-| 8 | 15/11 (14/11 manqué) | Copinage (4 mèmes) | ✅ v2 | ✅ | ✅ 61 s | ✅ | ✅ | ✅ |
-| 9 | 17/11 (16/11 manqué) | Oligarchie (3 mèmes) | ✅ v2 | ✅ | ✅ 65 s | ✅ | ✅ | ⏳ à 18h |
-| 10 | 18/11 | Censure | ✅ | ⏳ | ⏳ | ⏳ | ⏳ | ⬜ |
-
-Calendrier : jours manqués 09/11, 14/11, 16/11 → J9 = 17/11, J60 = 07/01/2027.
-
-## Fichiers
-- Jour 1 : `/home/user/videos/J01_nepotisme/` (vidéo, miniature, fiche, script, MP3)
-- Jour 2 : `/home/user/videos/J02_dictature/` (script)
-- Scénario et moteur : skill `minecraft-explainer-video`
-
-## À faire
-- [ ] Publier J1 à 18h
-- [ ] Déposer le MP3 du J2 (dictature)
-- [ ] Ajouter `TELEGRAM_BOT_TOKEN` à l'environnement (optionnel)
-- [ ] Décider : accès API ElevenLabs pour automatiser le MP3 (optionnel)
+Jours manqués : 09/11, 14/11, 16/11 → calendrier décalé de 3 jours (J60 = 07/01/2027).
+Prochains sujets : J11 Auto-coup d'État · J12 Pot-de-vin · J13 Totalitarisme · J14 Élections truquées · J15 Kleptocratie (ordre complet : `calendrier_60_videos_pouvoir.xlsx`).

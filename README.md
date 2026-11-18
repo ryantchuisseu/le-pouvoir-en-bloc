@@ -2,6 +2,12 @@
 
 Chaîne YouTube Shorts : une notion de pouvoir (népotisme, dictature, coup d'État…) expliquée chaque jour à 18h, en animation style Minecraft, ton sarcastique.
 
+## Pour reprendre
+- `RESUME.md` : résumé complet et points ouverts
+- `PROMPT_REPRISE.md` : texte à coller dans une nouvelle conversation
+- `PRODUCTION.md` : comment une vidéo est produite (rôles, règles, commandes)
+- `ETAT.md` : statut jour par jour
+
 ## Contenu
 | Dossier | Rôle |
 |---|---|
